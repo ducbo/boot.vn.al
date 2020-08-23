@@ -20,7 +20,7 @@ item 7 ${space} ${os} 7.x Latest
 item 6.10 ${os} 6.10
 isset ${osversion} || choose osversion || goto linux_menu
 echo ${cls}
-set dir ${centos_base_dir}/${osversion}/BaseOS/${arch}/os
+set dir ${centos_base_dir}/${osversion}/os/x86_64
 iseq ${osversion} 6.10 && set dir ${menu}/${osversion}/os/${arch} ||
 set dir ${centos_base_dir}/${osversion}/BaseOS/${arch}/os
 iseq ${osversion} 7 && set dir ${centos_base_dir}/${osversion}/os/${arch} ||
