@@ -17,8 +17,11 @@ item 8.1.1911 ${space} ${os} 8.1
 item 8.0.1905 ${space} ${os} 8.0
 item 8-stream ${space} ${os} 8.0 Stream
 item 7 ${space} ${os} 7.x Latest
+item 6.10 ${os} 6.10
 isset ${osversion} || choose osversion || goto linux_menu
 echo ${cls}
+set dir ${centos_base_dir}/${osversion}/BaseOS/${arch}/os
+iseq ${osversion} 6.10 && set dir ${menu}/${osversion}/os/${arch} ||
 set dir ${centos_base_dir}/${osversion}/BaseOS/${arch}/os
 iseq ${osversion} 7 && set dir ${centos_base_dir}/${osversion}/os/${arch} ||
 set repo ${centos_mirror}/${dir}
